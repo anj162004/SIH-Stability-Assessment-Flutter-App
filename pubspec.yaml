@@ -1,0 +1,25 @@
+name: ssat_prototype_flutter
+description: Minimal prototype for Structural Stability Assessment Tool (SIH)
+version: 0.1.0
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  fluttertoast: ^8.2.4
+  file_picker: ^8.0.2
+  path_provider: ^2.1.3
+  universal_html: ^2.2.4
+  json_annotation: ^4.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+
+
+
+flutter:
+  uses-material-design: true
