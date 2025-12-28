@@ -1,7 +1,14 @@
-/build
-/.dart_tool
-/.idea
-*.iml
-.macos
-.ios
-.android
+# Python
+__pycache__/
+*.pyc
+
+# Backend runtime data
+backend/uploads/
+backend/results/
+
+# Flutter
+.flutter-plugins-dependencies
+
+# Env
+venv/
+.env
