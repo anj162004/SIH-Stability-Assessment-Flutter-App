@@ -1,19 +1,54 @@
-Structural Stability Assessment Tool - Flutter Prototype
--------------------------------------------------------
-This is a minimal prototype scaffold for the SIH problem "Structural Stability Assessment Tool for Collapsed Structures".
-It includes:
-- Flutter app skeleton (lib/main.dart)
-- pubspec.yaml listing required packages
-- A simple local JSON save representing offline capability
-- Map interaction using flutter_map (OpenStreetMap)
-- Image picker integration (for photo upload)
+# Structural Stability Assessment Tool (Flutter + Flask)
 
-How to run:
-1. Ensure Flutter SDK is installed and configured.
-2. From the project root, run: `flutter pub get`
-3. Then run: `flutter run` on an emulator or device.
+This project was developed as part of **Smart India Hackathon (SIH)** to assess the
+structural stability of buildings damaged due to natural disasters such as earthquakes,
+cyclones, and collapses. The system integrates a **Flutter-based mobile interface**
+with a **Python Flask backend** to analyze images, sensor data, and structural indicators
+to assist rescue and inspection teams.
 
-Notes:
-- Mapbox integration is left as a placeholder. Replace the map widget with Mapbox plugin if needed and add your token.
-- Stability calculation is a placeholder function `estimateStabilityScore(...)` in `lib/main.dart`. Replace with your engineering logic or ML model.
-- This prototype intentionally keeps platform-specific files out. It's a simple scaffold meant for rapid iteration.
+---
+
+## 🔍 Key Features
+
+- **Flutter Mobile Application**
+  - Image capture & upload (aerial and side views)
+  - Offline-first design with local data persistence
+  - Interactive map visualization using OpenStreetMap (`flutter_map`)
+  - Multi-screen workflow for image upload, sensor input, and results
+
+- **Backend Processing (Flask)**
+  - Crack detection using patch-based image analysis
+  - Heatmap visualization of crack severity using OpenCV
+  - Beam and column localization with structural overlays
+  - Sensor-based hazard detection (gas leak, temperature, voltage)
+  - Final structural stability classification: *Safe / Caution / Weak / Critical*
+
+- **Machine Learning**
+  - TensorFlow Lite models for lightweight inference
+  - Image-based damage scoring
+  - Risk aggregation from visual + sensor data
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
+- Flutter (Dart)
+- flutter_map (OpenStreetMap)
+- Image Picker
+- REST API integration
+
+**Backend**
+- Python
+- Flask + Flask-CORS
+- NumPy, OpenCV, Pandas
+- TensorFlow Lite
+
+---
+
+## 🚀 How to Run (Prototype)
+
+### Flutter App
+```bash
+flutter pub get
+flutter run
